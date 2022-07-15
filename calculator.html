@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculater</title>
+        <link rel="stylesheet" href="calculator.css">
+        <script type="text/javascript">
+            var temp=" ";
+            function store(){
+                document.getElementById('demo').value=temp;
+            }
+            //function 1
+            function fun1(){
+                var input1=document.getElementById('bt1').value;
+                temp=temp+input1;
+                store(temp);
+            }
+            //function 2
+            function fun2(){
+                var input2=document.getElementById('bt2').value;
+                temp=temp+input2;
+                store(temp);
+            }
+            //function 3
+            function fun3(){
+                var input2=document.getElementById('bt3').value;
+                temp=temp+input2;
+                store(temp);
+            }
+            //function 4
+            function fun4(){
+                var input2=document.getElementById('bt4').value;
+                temp=temp+input2;
+                store(temp);
+            }
+            //function 5
+            function fun5(){
+                var input2=document.getElementById('bt5').value;
+                temp=temp+input2;
+                store(temp);
+            }
+            //function 6
+            function fun6(){
+                var input2=document.getElementById('bt6').value;
+                temp=temp+input2;
+                store(temp);
+            }
+            //function 7
+            function fun7(){
+                var input2=document.getElementById('bt7').value;
+                temp=temp+input2;
+                store(temp);
+            }
+            //function 8
+            function fun8(){
+                var input2=document.getElementById('bt8').value;
+                temp=temp+input2;
+                store(temp);
+            }
+            //function 9
+            function fun9(){
+                var input2=document.getElementById('bt9').value;
+                temp=temp+input2;
+                store(temp);
+            }
+            //function 0
+            function fun_zero(){
+                var input2=document.getElementById('btzero').value;
+                temp=temp+input2;
+                store(temp);
+            }
+            //function add
+            function fun_add(){
+                var input2=document.getElementById('btadd').value;
+                temp=temp+input2;
+                store(temp);
+            }
+            //function min
+            function fun_sub(){
+                var input2=document.getElementById('btsub').value;
+                temp=temp+input2;
+                store(temp);
+            }
+            //function mult
+            function fun_mul(){
+                var input2=document.getElementById('btmul').value;
+                temp=temp+input2;
+                store(temp);
+            }
+            //function div
+            function fun_div(){
+                var input2=document.getElementById('btdiv').value;
+                temp=temp+input2;
+                store(temp);
+            }
+            //function dot
+            function fun_dot(){
+                var input2=document.getElementById('btdot').value;
+                temp=temp+input2;
+                store(temp);
+            }
+            //function equal
+            function fun_equal(){
+                try {
+                
+                var n = eval(document.getElementById("demo").value); 
+                if(n=="Infinity" || n=="-Infinity"){
+                    throw "Zero Division Error";
+                }
+               
+                document.getElementById("demo").value=n;
+                document.getElementById("demo").style.background="green";
+                exp=n;               
+            }catch(err){
+
+                if(err=="Zero Division Error"){
+                    alert("Invalid\n"+err);
+
+                }
+                else{
+                    alert("Invalid Error");
+                }
+                document.getElementById("demo").style.background="red";
+           }
+            }
+               
+ //function clear
+ function reset() {
+                document.getElementById('demo').value = ''; 
+                temp=" ";
+            }
+            
+    </script>
+    </head>
+    <body>
+        
+           <h1>Calculater</h1>
+           <div class="div2">
+               <table style="padding-left: 45px;">
+                        <input type ="text" name = "answer" class="calc" id="demo">
+                        <tr>
+                            <td><input type="button" onclick="fun1()" id="bt1" value="1"> </td>
+                            <td class="td"><input type="button" onclick="fun2()" id="bt2" value="2" > </td>
+                            <td class="td"><input type="button" onclick="fun3()" id="bt3" value="3"></td>
+                             <td class="td"><input type="button"  onclick="fun_add()" id="btadd" value="+" > </td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" onclick="fun4()" id="bt4" value="4" > </td>
+                            <td class="td"><input type="button" onclick="fun5()" id="bt5" value="5" > </td>
+                            <td class="td"><input type="button" onclick="fun6()" id="bt6"  value="6" ></td>
+                            <td class="td"><input type="button"   onclick="fun_sub()" id="btsub"value="-" > </td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" onclick="fun7()" id="bt7" value="7"> </td>
+                            <td class="td"><input type="button" onclick="fun8()" id="bt8" value="8"> </td>
+                            <td class="td"><input type="button" onclick="fun9()" id="bt9" value="9"></td>
+                                <td class="td"><input type="button" onclick="fun_mul()" id="btmul" value="*"> </td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" onclick="fun_dot()" id="btdot"  value="."> </td>
+                            <td class="td"><input type="button" onclick="fun_zero()" id="btzero" value="0"> </td>
+                            <td class="td"><input type="button" onclick="fun_equal()" id="btequal" value="="></td>
+                                <td class="td"><input type="button" onclick="fun_div()" id="btdiv" value="/"> </td>
+                        </tr>
+                        
+                    </table>
+                
+               
+                <input type="submit"  onclick="reset()"  value="clear" class= "clear"></td>
+                
+           </div>
+
+    </body>
+</html>
